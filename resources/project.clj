@@ -7,7 +7,7 @@
                            [org.clojure/clojurescript "1.10.339"]
                            $INTERFACE_DEPS$]
             :plugins [[lein-cljsbuild "1.1.4"]
-                      [lein-figwheel "0.5.14"]]
+                      [lein-figwheel "0.5.18"]]
             :clean-targets ["target/" #_($PLATFORM_CLEAN$)]
             :aliases {"prod-build" ^{:doc "Recompile code with prod profile."}
                                    ["do" "clean"
@@ -16,7 +16,7 @@
                                    ["do" "clean"
                                     ["with-profile" "advanced" "cljsbuild" "once"]]}
             :jvm-opts ["-XX:+IgnoreUnrecognizedVMOptions" "--add-modules=java.xml.bind"]
-            :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.14"]
+            :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.18"]
                                             [com.cemerick/piggieback "0.2.1"]]
                              :source-paths ["src" "env/dev"]
                              :cljsbuild    {:builds [
